@@ -40,6 +40,7 @@ private:
 
     zx_status_t Start();
     zx_status_t GpioInit();
+    zx_status_t I2cInit();
     zx_status_t UsbInit();
     int Thread();
 
