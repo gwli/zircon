@@ -8,4 +8,4 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-exec $DIR/flash-avb -b imx8mevk
+exec $DIR/flash-avb -b imx8mmevk
