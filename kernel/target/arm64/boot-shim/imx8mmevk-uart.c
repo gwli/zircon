@@ -9,7 +9,7 @@
 #define MX8_UTS                     (0xB4)
 #define UTS_TXFULL                  (1 << 4)
 
-#define UARTREG(reg) (*(volatile uint32_t*)(0x30860000 + (reg)))
+#define UARTREG(reg) (*(volatile uint32_t*)(0x30890000 + (reg)))
 
 void uart_pputc(char c) {
     while (UARTREG(MX8_UTS) & UTS_TXFULL)

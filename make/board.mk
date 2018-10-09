@@ -117,6 +117,7 @@ EXTRA_BUILDDEPS += $(BOARD_ZIRCON_ZBOOTIMAGE_DTB)
 $(BOARD_BOOTIMG): $(BOARD_ZIRCON_ZBOOTIMAGE_DTB)
 	$(call BUILDECHO,generating $@)
 	$(NOECHO)$(MKBOOTIMG) --kernel $< --kernel_offset $(PLATFORM_KERNEL_OFFSET) \
+	    --second $(DUMMY_DTB) --second_offset 0x03000000 \
 	    --base $(PLATFORM_MEMBASE) --tags_offset 0xE000000 --cmdline $(PLATFORM_CMDLINE) -o $@
 
 GENERATED += $(BOARD_BOOTIMG)
